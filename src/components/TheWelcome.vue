@@ -12,7 +12,9 @@ import SupportIcon from "./icons/IconSupport.vue";
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>Documentation</template>
+    <template #heading>
+      <RouterLink to="/about">Documentation</RouterLink>
+    </template>
 
     Vue’s
     <a target="_blank" href="https://vuejs.org/">official documentation</a>
