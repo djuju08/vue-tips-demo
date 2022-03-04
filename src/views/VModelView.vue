@@ -1,3 +1,0 @@
-<template>
-  <h1>v-model</h1>
-</template>

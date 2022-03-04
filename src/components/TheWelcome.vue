@@ -9,17 +9,6 @@ import ToolingIcon from "./icons/IconTooling.vue";
       <ToolingIcon />
     </template>
     <template #heading>
-      <RouterLink to="/v-model">v-model</RouterLink>
-    </template>
-
-    The underlying prop and event (by default and customisable)
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>
       <RouterLink to="/mutate-prop"
         >mutation of a prop in child component</RouterLink
       >
@@ -43,10 +32,9 @@ import ToolingIcon from "./icons/IconTooling.vue";
     <template #icon>
       <ToolingIcon />
     </template>
-    <template #heading>
-      <RouterLink to="/v-for">v-for and key</RouterLink>
+    <template #heading>v-for and key
     </template>
-    The misuse of the index as key
+    Avoid to use the index as key, it can leads to rendering issues
   </WelcomeItem>
 
   <WelcomeItem>

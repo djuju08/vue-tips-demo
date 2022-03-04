@@ -24,11 +24,6 @@ const router = createRouter({
       component: FormValidation,
     },
     {
-      path: "/v-model",
-      name: " vmodel",
-      component: () => import("../views/VModelView.vue"),
-    },
-    {
       path: "/mutate-prop",
       name: " mutateProp",
       component: () => import("../views/MutatePropView.vue"),
