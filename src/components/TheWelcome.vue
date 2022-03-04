@@ -10,7 +10,7 @@ import ToolingIcon from "./icons/IconTooling.vue";
     </template>
     <template #heading>
       <RouterLink to="/mutate-prop"
-        >mutation of a prop in child component</RouterLink
+        >Mutation of a prop in child component</RouterLink
       >
     </template>
 
