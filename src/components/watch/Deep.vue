@@ -30,6 +30,12 @@ export default {
         this.$emit('update:modelValue', value)
       },
       deep: true
+    },
+    'deep.text': {
+       handler(newValue, oldValue) {
+         console.log("new value: ", newValue)
+         console.log("old value: ", oldValue)
+       }
     }
   }
 }
