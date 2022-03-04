@@ -14,8 +14,8 @@ import ToolingIcon from "./icons/IconTooling.vue";
       >
     </template>
 
-    You can't use a prop in a v-model on a child component, you need to use a
-    computed/watch and a data property
+    You can't use a <code>prop</code> in a <code>v-model</code> on a child component, you need to use a
+    <code>computed</code>/<code>watch</code> and a data property
   </WelcomeItem>
 
   <WelcomeItem>
