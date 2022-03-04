@@ -1,80 +1,134 @@
 <template>
-  <div class="about">
-    <h1>This is a small form using vee validation for the validation</h1>
-  </div>
-
-
-  <div>
-    <h2>Text Input</h2>
-    <input v-model="text" /> {{ text }}
-
-    <h2>Checkbox</h2>
-    <input type="checkbox" id="checkbox" v-model="checked" />
-    <label for="checkbox">Checked: {{ checked }}</label>
-
-    <!--
-      multiple checkboxes can bind to the same
-      array v-model value
-    -->
-    <h2>Multi Checkbox</h2>
-    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
-    <label for="jack">Jack</label>
-    <input type="checkbox" id="john" value="John" v-model="checkedNames" />
-    <label for="john">John</label>
-    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
-    <label for="mike">Mike</label>
-    <p>Checked names: <pre>{{ checkedNames }}</pre></p>
-
-    <h2>Radio</h2>
-    <input type="radio" id="one" value="One" v-model="picked" />
-    <label for="one">One</label>
-    <br />
-    <input type="radio" id="two" value="Two" v-model="picked" />
-    <label for="two">Two</label>
-    <br />
-    <span>Picked: {{ picked }}</span>
-
-    <h2>Select</h2>
-    <select v-model="selected">
-      <option disabled value="">Please select one</option>
-      <option>A</option>
-      <option>B</option>
-      <option>C</option>
-    </select>
-    <span>Selected: {{ selected }}</span>
-
-    <h2>Multi Select</h2>
-    <select v-model="multiSelected" multiple style="width:100px">
-      <option>A</option>
-      <option>B</option>
-      <option>C</option>
-    </select>
-    <span>Selected: {{ multiSelected }}</span>
-  </div>
+  <Form>
+    <h4>Required rule</h4>
+    <p>
+      <Field name="requiredField" rules="required" />
+      <ErrorMessage name="requiredField" />
+    </p>
+    <h4>Email rule</h4>
+    <p>
+    <Field name="field" rules="email" />
+      <ErrorMessage name="field" />
+    </p>
+    <h4>Url rule</h4>
+    <p>
+    <Field name="urlField" rules="url" />
+    <ErrorMessage name="urlField" />
+    </p>
+  </Form>
 </template>
-
-
 <script>
+import { Field, Form, ErrorMessage, defineRule } from 'vee-validate';
+import { required, email, url } from '@vee-validate/rules';
+
+defineRule('required', required);
+defineRule('email', email);
+defineRule('url', url);
+
 export default {
-  data() {
-    return {
-      text: 'Edit me',
-      checked: true,
-      checkedNames: ['Jack'],
-      picked: 'One',
-      selected: 'A',
-      multiSelected: ['A']
-    }
+  components: {
+    Field,
+    Form,
+    ErrorMessage,
   }
-}
+};
 </script>
 
+
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0071fe;
+  --error-color: #f23648;
+  --error-bg-color: #fddfe2;
+  --success-color: #21a67a;
+  --success-bg-color: #e0eee4;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 60px;
+
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  width: 300px;
+  margin: 0px auto;
+  padding-bottom: 60px;
+}
+
+.submit-btn {
+  background: var(--primary-color);
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+  width: 100%;
+  border-radius: 7px;
+  margin-top: 40px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.submit-btn.invalid {
+  animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px);
   }
+  10% {
+    transform: translate(-1px, -2px);
+  }
+  20% {
+    transform: translate(-3px, 0px);
+  }
+  30% {
+    transform: translate(3px, 2px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 2px);
+  }
+  60% {
+    transform: translate(-3px, 1px);
+  }
+  70% {
+    transform: translate(3px, 1px);
+  }
+  80% {
+    transform: translate(-1px, -1px);
+  }
+  90% {
+    transform: translate(1px, 2px);
+  }
+  100% {
+    transform: translate(1px, -2px);
+  }
+}
+
+.submit-btn:hover {
+  transform: scale(1.1);
 }
 </style>
