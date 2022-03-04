@@ -49,19 +49,10 @@ import SupportIcon from "./icons/IconSupport.vue";
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>Ecosystem</template>
+    <template #heading><a href="https://vee-validate.logaretm.com/v4/" target="_blank"> Vee-validate </a></template>
 
-    Get official tools and libraries for your project:
-    <a target="_blank" href="https://pinia.vuejs.org/">Pinia</a>,
-    <a target="_blank" href="https://router.vuejs.org/">Vue Router</a>,
-    <a target="_blank" href="https://test-utils.vuejs.org/">Vue Test Utils</a>,
-    and
-    <a target="_blank" href="https://github.com/vuejs/devtools">Vue Dev Tools</a
-    >. If you need more resources, we suggest paying
-    <a target="_blank" href="https://github.com/vuejs/awesome-vue"
-      >Awesome Vue</a
-    >
-    a visit.
+    Vee validate is a form validation library made for VueJs.
+    This library is already supporting vue 3
   </WelcomeItem>
 
   <WelcomeItem>
