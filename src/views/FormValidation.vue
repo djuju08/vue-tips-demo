@@ -3,17 +3,23 @@
     <h4>Required rule</h4>
     <p>
       <Field name="requiredField" rules="required" />
-      <ErrorMessage name="requiredField" />
+      <p>
+        <ErrorMessage name="requiredField" />
+      </p>
     </p>
     <h4>Email rule</h4>
     <p>
-    <Field name="field" rules="email" />
-      <ErrorMessage name="field" />
+      <Field name="field" rules="email" ></Field>
+      <p>
+        <ErrorMessage name="field" />
+      </p>
     </p>
     <h4>Url rule</h4>
     <p>
-    <Field name="urlField" rules="url" />
-    <ErrorMessage name="urlField" />
+      <Field name="urlField" rules="url" />
+      <p>
+        <ErrorMessage name="urlField" />
+      </p>
     </p>
   </Form>
 </template>
