@@ -60,6 +60,17 @@ import ToolingIcon from "./icons/IconTooling.vue";
     >
 
     Vee validate is a form validation library made for VueJs.
+    <ul>
+      <li>
+        Library can be used in combination with a custom UI library
+      </li>
+      <li>
+        Validations by using yup.js
+      </li>
+      <li>
+        (or) Validations by vee validate validators
+      </li>
+    </ul>
 
     <p>
       Find an example
