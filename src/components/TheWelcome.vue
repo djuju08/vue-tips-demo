@@ -36,7 +36,7 @@ import ToolingIcon from "./icons/IconTooling.vue";
     <template #heading>
       <RouterLink to="/watch">watch</RouterLink>
     </template>
-    The use of deep:true with an object property and immediate
+    The use of deep:true with an object property
   </WelcomeItem>
 
   <WelcomeItem>
