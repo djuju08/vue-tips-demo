@@ -33,7 +33,7 @@ import ToolingIcon from "./icons/IconTooling.vue";
     <template #icon>
       <ToolingIcon />
     </template>
-    <template #heading>v-for and key
+    <template #heading><span class="green">v-for and key</span>
     </template>
     Avoid to use the index as key, it can leads to rendering issues
   </WelcomeItem>
@@ -43,9 +43,9 @@ import ToolingIcon from "./icons/IconTooling.vue";
       <ToolingIcon />
     </template>
     <template #heading>
-      <span class="green">VueJs slot</span>
+      <span class="green">Slots</span>
     </template>
-    VeeJs provide the <code>slot content</code> that allows you to provide custom(s) template(s) to a component.
+    Vue provides the <code>slot component</code> that allows you to provide custom(s) template(s) to a component.
   </WelcomeItem>
 
   <WelcomeItem>
