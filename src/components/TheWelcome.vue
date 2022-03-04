@@ -25,7 +25,8 @@ import ToolingIcon from "./icons/IconTooling.vue";
     <template #heading>
       <RouterLink to="/watch">watch</RouterLink>
     </template>
-    The use of deep:true with an object property and immediate
+    The use of <code>deep:true</code> with an object property.
+    <p>/!\ Don't use watch <code>deep:true</code> if you want to watch on a specific property</p>
   </WelcomeItem>
 
   <WelcomeItem>
@@ -35,6 +36,16 @@ import ToolingIcon from "./icons/IconTooling.vue";
     <template #heading>v-for and key
     </template>
     Avoid to use the index as key, it can leads to rendering issues
+  </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <ToolingIcon />
+    </template>
+    <template #heading>
+      <span class="green">VueJs slot</span>
+    </template>
+    VeeJs provide the <code>slot content</code> that allows you to provide custom(s) template(s) to a component.
   </WelcomeItem>
 
   <WelcomeItem>
