@@ -52,7 +52,13 @@ import SupportIcon from "./icons/IconSupport.vue";
     <template #heading><a href="https://vee-validate.logaretm.com/v4/" target="_blank"> Vee-validate </a></template>
 
     Vee validate is a form validation library made for VueJs.
-    This library is already supporting vue 3
+
+    <p>
+      Find an example
+      <RouterLink to="/form-validation">here</RouterLink>
+    </p>
+
+
   </WelcomeItem>
 
   <WelcomeItem>
