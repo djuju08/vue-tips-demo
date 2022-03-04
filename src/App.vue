@@ -18,7 +18,9 @@ import HelloWorld from "@/components/HelloWorld.vue";
     </div>
   </header>
 
-  <RouterView />
+  <div class="demo">
+    <RouterView />
+  </div>
 </template>
 
 <style>
@@ -115,6 +117,10 @@ nav a:first-of-type {
 
     padding: 1rem 0;
     margin-top: 1rem;
+  }
+
+  .demo {
+    min-width: 600px;
   }
 }
 </style>
